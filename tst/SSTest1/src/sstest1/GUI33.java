@@ -268,6 +268,8 @@ public class GUI33 extends javax.swing.JFrame {
                 new GUI33().setVisible(true);
             }
         });
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
