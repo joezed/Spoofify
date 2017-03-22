@@ -3,6 +3,8 @@ package sstest1;
 
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.*;
 
 /*
@@ -15,6 +17,8 @@ import javax.swing.*;
  *
  * @author Paul
  */
+
+
 public class GUI2 extends javax.swing.JFrame {
 
     /**
@@ -156,9 +160,20 @@ public class GUI2 extends javax.swing.JFrame {
             //fileWriter.write(UsernameBox.getText());
             //fileWriter.close();
             
+        // Accepts User Input
         String username = UsernameBox.getText();
         String DOB = POBbox.getText();
         String POB = DOBbox.getText();
+        
+        // Assigns which special characters we don't accept  
+
+//        if (username.matches("[A-Za-z0-9")){
+//            System.out.println("password contains only valid characters");
+//       } else {
+//            System.out.println("invalid characters in password");
+////            break;
+//       }
+        
 //        PrintWriter writer = new PrintWriter("textFieldOutput.txt", "UTF-8");
         PrintWriter writer = new PrintWriter(new FileOutputStream(
                 new File("textFieldOutput.txt"),
