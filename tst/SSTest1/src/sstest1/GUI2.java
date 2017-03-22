@@ -159,7 +159,10 @@ public class GUI2 extends javax.swing.JFrame {
         String username = UsernameBox.getText();
         String DOB = POBbox.getText();
         String POB = DOBbox.getText();
-        PrintWriter writer = new PrintWriter("textFieldOutput.txt", "UTF-8");
+//        PrintWriter writer = new PrintWriter("textFieldOutput.txt", "UTF-8");
+        PrintWriter writer = new PrintWriter(new FileOutputStream(
+                new File("textFieldOutput.txt"),
+                true));
         writer.println(username + ", " + DOB + ", " + POB);
         writer.close();
         new GUI1().setVisible(true);
